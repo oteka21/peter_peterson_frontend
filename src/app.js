@@ -1,12 +1,14 @@
 
-import React from "react";
-import { hot } from 'react-hot-loader/root';
+import React from "react"
+import { hot } from 'react-hot-loader/root'
+import { Navigation } from './components/Header'
+import { GlobalSyles } from './assets/GlobalStyles'
 
-class App extends React.Component {
-  render() {
-    const { name } = this.props;
-    return <h1>Hello {name}</h1>;
-  }
+function App (){
+  return <>
+    <GlobalSyles />
+    <Navigation />
+  </>
 }
 
 export default hot(App);
