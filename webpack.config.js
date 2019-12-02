@@ -3,10 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
-  entry: [
-    'react-hot-loader/patch',
-    './src/index.js'
-  ],
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js'
@@ -35,13 +32,7 @@ const config = {
     extensions: [
       '.js',
       '.jsx'
-    ],
-    alias: {
-      'react-dom': '@hot-loader/react-dom'
-    }
-  },
-  devServer: {
-    contentBase: './dist'
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -64,11 +55,4 @@ const config = {
   }
 };
 
-module.exports = (env, argv) => {
-  if (argv.hot) {
-    // Cannot use 'contenthash' when hot reloading is enabled.
-    config.output.filename = '[name].[hash].js';
-  }
-
-  return config;
-};
+module.exports = config;
