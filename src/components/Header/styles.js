@@ -7,5 +7,9 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: ${sizes.padding};
+  padding: ${sizes.padding_mobile};
+
+  @media(min-width: 1024px){
+    padding: ${sizes.padding};
+  }
 `

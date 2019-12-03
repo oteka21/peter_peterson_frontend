@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 
 export const Container = styled.nav`
-  display: flex;
-  flex-wrap: wrap;
+  display: none;
+
+  @media(min-width: 768px){
+    display: flex;
+    flex-wrap: wrap;
+  }
 `
 
 export const Menu = styled.ul`
@@ -13,7 +17,7 @@ export const Menu = styled.ul`
 
 export const Link = styled.a`
   display: block;
-  padding: 8px 16px;
+  padding: 8px 8px;
   text-decoration: none;
   text-transform: uppercase;
   color:#B2B2B2;
@@ -21,5 +25,9 @@ export const Link = styled.a`
   &:hover{
     background: #5982E2;
     color: #fff;
+  }
+
+  @media(min-width: 1024px){
+    padding: 8px 16px;
   }
 `

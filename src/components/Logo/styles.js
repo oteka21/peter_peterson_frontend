@@ -17,12 +17,20 @@ export const Figure = styled.img`
 `
 
 export const Title = styled.span`
-  display: flex;
   width: 80%;
-  flex-direction: column;
-  justify-content: space-between;
   font-size: 21px;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  @media(min-width: 768px){
+    display: none;
+  }
+
+  @media(min-width: 1024px){
+    display: flex;
+  }
 `
 
 export const Light = styled.span`

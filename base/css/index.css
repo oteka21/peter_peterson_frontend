@@ -206,12 +206,6 @@ body {
   font-style: italic;
 }
 
-.util-item a{
-  text-decoration: none;
-  color: #93B0C7;
-  font-style: italic;
-}
-
 .util-item-image{
   width: 120px;
   height: 120px;
@@ -229,6 +223,7 @@ body {
 .hidden{
   display: none;
 }
+
 .downloads{
   margin: var(--root-padding);
   margin-top: 50px;
@@ -312,6 +307,7 @@ footer{
 .credits-section ul li:last-child a{
   border: 0;
 }
+
 .social-container{
   background: #D7D7D7;
   padding: var(--root-padding);

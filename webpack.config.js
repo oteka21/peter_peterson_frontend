@@ -16,7 +16,7 @@ const config = {
         exclude: /node_modules/
       },
       {
-        test: /\.png$/,
+        test: /\.(png|jpg)$/,
         use: [
           {
             loader: 'url-loader',
@@ -39,6 +39,12 @@ const config = {
         template: require('html-webpack-template'),
         inject: false,
         appMountId: 'app',
+        meta: [
+          {
+            name: 'viewport',
+            content: 'width=device-width, initial-scale=1'
+          }
+        ]
       })
   ],
   optimization: {
