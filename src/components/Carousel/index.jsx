@@ -14,7 +14,7 @@ export const Carousel = () => {
 
   const  changeCurrent = () => {
     if (current < images.length - 1){
-      setCurrent(current + 1)
+      setCurrent(current => current + 1)
     }else{
       setCurrent(0)
     }
