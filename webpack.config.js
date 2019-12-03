@@ -39,12 +39,21 @@ const config = {
         template: require('html-webpack-template'),
         inject: false,
         appMountId: 'app',
+        links: [
+          {
+            href: './src/assets/images/favicon-16x16.png',
+            rel: 'icon',
+            sizes: '32x32',
+            type: 'image/png'
+          }
+        ],
         meta: [
           {
             name: 'viewport',
             content: 'width=device-width, initial-scale=1'
-          }
-        ]
+          },
+        ],
+        title: 'PP School'
       })
   ],
   optimization: {
