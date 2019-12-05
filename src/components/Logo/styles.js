@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from '../../assets/media'
 
 export const Container = styled.a`
   text-decoration: none;
@@ -23,14 +24,14 @@ export const Title = styled.span`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
-  @media(min-width: 768px){
-    display: none;
-  }
 
-  @media(min-width: 1024px){
+  ${media.medium`
+    display: none;
+  `}
+
+  ${media.large`
     display: flex;
-  }
+  `}
 `
 
 export const Light = styled.span`

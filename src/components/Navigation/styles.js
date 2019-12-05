@@ -21,6 +21,7 @@ export const Link = styled.a`
   text-decoration: none;
   text-transform: uppercase;
   color:#B2B2B2;
+  font-weight: bold;
 
   &:hover{
     background: #5982E2;

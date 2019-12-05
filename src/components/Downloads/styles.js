@@ -1,15 +1,12 @@
 import styled from 'styled-components'
-import { sizes } from '../../assets/theme'
+import media from '../../assets/media'
 
-export const Container = styled.section`
-  margin: ${sizes.padding_mobile};
-  margin-top: 50px;
-  margin-bottom: 50px;
+export const Container = styled.div`
+  margin: 20px 0;
   
-  @media(min-width: 768px){
-    margin: ${sizes.padding};
-    margin-bottom: 0px;
-  }
+  ${media.large`
+    margin: 40px 0;
+  `}
 `
 export const Title = styled.h2`
   margin: 20px 0;
@@ -18,10 +15,9 @@ export const Title = styled.h2`
 
 export const CardContainer = styled.div`
   display: flex;
-  /* justify-content: center; */
-  overflow-x: scroll;
+  flex-wrap:wrap;
 
-  @media(min-width: 768px){
+  ${media.large`
     justify-content: space-between;
-  }
+  `}
 `

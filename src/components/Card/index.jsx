@@ -3,7 +3,7 @@ import { Container, Text, Image, Content } from './styles'
 import PropTypes from 'prop-types' 
 
 export const Card = ({ source, title, text, href }) => (
-  <Container href={href} >
+  <Container>
     <Image src={source} />
     <Content>
       <h3>

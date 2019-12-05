@@ -1,21 +1,22 @@
 import styled from 'styled-components'
-import { sizes } from '../../assets/theme'
 
-export const Info = styled.div`
-  justify-content: space-between;
-  padding: ${sizes.padding};
-  padding-top: 30px;
-  padding-bottom: 30px;
+export const InfoContainer = styled.div`
   background: #D7D7D7;
-  color: #676767;
-  display: none;
-  
-  @media(min-width: 768px){
-    display: flex;
-  }
 `
 
 export const InfoItem = styled.div`
+
+`
+
+export const InfoContent = styled.div`
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #676767;
+  display: none;
+  @media(min-width: 768px){
+    display: flex;
+  }
 
 `
 

@@ -1,15 +1,15 @@
 import styled from 'styled-components'
+import media from '../../assets/media'
 
-export const Container = styled.a`
+export const Container = styled.div`
   width: 100%;
   min-width: 200px;
   text-decoration: none;
   flex-wrap: wrap;
-  margin: 0 10px;
 
-  @media (min-width: 768px){
-    width: calc(100% / 3 - 10px);
-  }
+  ${media.large`
+    max-width: 320px;
+  `}
 `
 
 export const Image = styled.img`

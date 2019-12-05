@@ -1,9 +1,9 @@
 import { css } from 'styled-components'
 
 const sizes = {
-   xl: 1000,
-   large: 900,
-   medium: 700,
+   xl: 1200,
+   large: 1024,
+   medium: 768,
    small: 400
 }
 

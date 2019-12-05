@@ -3,31 +3,30 @@ import { sizes } from '../../assets/theme'
 import media  from '../../assets/media'
 
 
-export const Container = styled.section`
-  padding: ${sizes.padding_mobile};
+export const Container = styled.div`
   margin-top: 50px;
-  /* width: 100px; */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  
-  
-  
-  @media(min-width: 1024px){
-    padding: ${sizes.padding};
+  ${media.large`
     justify-content: space-between;
-  }
+  `}
 `
 
 export const Element = styled.article`
   background: #F6F6F6;
-  width: 220px;
+  width: 100%;
   height: 280px;
   margin-top: 70px;
   text-align: center;
   padding: 70px 10px;
   position: relative;
-  margin: 70px 20px 0px 20px;
+  margin: 40px 0;
+
+
+  ${media.large`
+    max-width: 220px;
+  `}
 `
 
 export const Graphic = styled.a`
@@ -35,7 +34,7 @@ export const Graphic = styled.a`
   height: 120px;
   background: #A3CACA;
   top: -60px;
-  left: 54px;
+  left: calc(50% - 60px);
   border-radius: 50%;
   position: absolute;
   
@@ -62,4 +61,5 @@ export const Link = styled.a`
   text-decoration: none;
   color: #93B0C7;
   font-style: italic;
+  text-transform: uppercase;
 `
