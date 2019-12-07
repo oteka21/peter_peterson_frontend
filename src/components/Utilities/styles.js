@@ -8,6 +8,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: flex-start;
   ${media.large`
     justify-content: space-between;
   `}
@@ -16,7 +17,7 @@ export const Container = styled.div`
 export const Element = styled.article`
   background: #F6F6F6;
   width: 100%;
-  height: 280px;
+  min-height: 280px;
   margin-top: 70px;
   text-align: center;
   padding: 70px 10px;

@@ -1,23 +1,30 @@
 import styled from 'styled-components'
+import media from '../../assets/media'
 
 export const InfoContainer = styled.div`
   background: #D7D7D7;
 `
 
-export const InfoItem = styled.div`
+export const InfoContent = styled.div`
+  /* justify-content: space-between; */
+  padding: 30px 0;
+  color: #676767;
+  flex-wrap: wrap;
+  display:flex;
 
+  ${media.large`
+    flex-wrap: nowrap;
+  `}
 `
 
-export const InfoContent = styled.div`
-  justify-content: space-between;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  color: #676767;
-  display: none;
-  @media(min-width: 768px){
-    display: flex;
-  }
+export const InfoItem = styled.div`
+  width: 100%;
+  text-align: center;
 
+  ${media.large`
+    width: 300px;
+    text-align: initial;
+  `}
 `
 
 export const List = styled.ul`
@@ -25,15 +32,30 @@ export const List = styled.ul`
     padding: 5px 0;
   }
 
-  li a{
+  & li:last-child{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & li a {
     text-decoration: none;
     color: #676767;
   }
+
+  & li a:hover{
+    text-decoration: underline;
+  }
+
+  ${media.large`
+    & li:last-child{
+      justify-content: initial;
+    }
+  `}
 `
 
 export const SocialContainer = styled.div`
   background: #D7D7D7;
-  padding: var(--root-padding);
   display: flex;
   justify-content: center;
   padding-top: 10px;
@@ -42,18 +64,29 @@ export const SocialContainer = styled.div`
 
   & .social-icon{
     fill: #676767;
+    font-size: 30px;
+  }
+  & .social-icon:hover{
+    fill: #a3a3a3;
   }
 `
 
 export const Credits = styled.div`
   background: #000;
-  padding: var(--root-padding);
+`
+
+export const CreditsContent = styled.div`
   padding-top: 2px;
   padding-bottom: 2px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   font-size: 12px;
+
+  ${media.large`
+    justify-content: space-between;
+  `}
 
   & ul li{
     display: inline-block;
@@ -67,7 +100,20 @@ export const Credits = styled.div`
     border-right: 1px solid #D7D7D7;
   }
 
+  & ul li a:hover{
+    text-decoration: underline;
+  }
+
   & ul li:last-child a {
     border: 0;
+  }
+
+  & div{
+    display: flex;
+    align-items: center;
+  }
+
+  & p{
+    color: #D7D7D7;
   }
 `

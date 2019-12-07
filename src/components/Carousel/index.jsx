@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
-import { Container, Element, Image, Message } from './styles'
+import { Container, Element, Image, Message, DotsControl, Dot } from './styles'
 import { useInterval } from '../../hooks/useInterval' 
-
-
-//TODO: create dots to view what image is current
 
 export const Carousel = ({images}) => {
   const [ current, setCurrent ] = useState(0)
@@ -16,7 +13,7 @@ export const Carousel = ({images}) => {
     }
   }
 
-  useInterval(changeCurrent, 3000);
+  useInterval(changeCurrent, 5000);
 
   return (
     <Container>
@@ -27,6 +24,11 @@ export const Carousel = ({images}) => {
           <p>Instituto Bíblico PETER PETERSON a Distancia.</p>
         </Message>
       </Element>
+      <DotsControl>
+        {
+          images.map((item, key) => <Dot key={key} active={key === current ? true : false } onClick={()=> setCurrent(key)}/>)
+        }
+      </DotsControl>
     </Container>
   )
 }

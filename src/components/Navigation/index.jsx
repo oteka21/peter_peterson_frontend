@@ -1,36 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Container, Menu, Link } from './styles'
 import { User } from '../User'
 import PropTypes from 'prop-types';
 
-const menuList = [
-  {
-    title: 'Inicio',
-    path: '#'
-  },
-  {
-    title: 'Info & Directiva',
-    path: '#'
-  },
-  {
-    title: 'Inscripcion',
-    path: '#'
-  },
-  {
-    title: 'Respuestas',
-    path: '#'
-  },
-  {
-    title: 'Peterson',
-    path: '#'
-  },
-  {
-    title: 'Contacto',
-    path: '#'
-  }
-]
-
-export const Navigation = ({list = menuList}) => (
+export const Navigation = ({list}) => {
+  return (
   <Container>
     <Menu>
       {
@@ -40,10 +14,10 @@ export const Navigation = ({list = menuList}) => (
           </Link>
         </li> )
       }
-      <User />
     </Menu>
+    <User />
   </Container>
-)
+)}
 
 Navigation.propTypes = {
   list: PropTypes.arrayOf(PropTypes.shape(

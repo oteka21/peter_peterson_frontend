@@ -38,7 +38,7 @@ const config = {
     new HtmlWebpackPlugin({
         template: require('html-webpack-template'),
         inject: false,
-        appMountId: 'app',
+        appMountIds: ['app', 'modal'],
         links: [
           {
             href: './src/assets/images/favicon-16x16.png',

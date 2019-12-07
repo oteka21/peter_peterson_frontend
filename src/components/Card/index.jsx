@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 export const Card = ({ source, title, text, href }) => (
   <Container>
-    <Image src={source} />
+    <a href='#'><Image src={source} /></a>
     <Content>
       <h3>
         {title}

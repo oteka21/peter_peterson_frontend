@@ -1,18 +1,29 @@
-import React from 'react'
-import { Container } from './styles'
+import React, { useState } from 'react'
+import { Container, BurguerButton } from './styles'
 import { Logo } from '../Logo'
 import { Navigation } from '../Navigation'
 import { PageSizer } from '../../assets/theme'
+import { Menu } from '../Menu'
+// import { Provider as ModalProvider } from '../Menu/context'
 
-//TODO: create a burguer menu
 
-export const Header = () => (
+export const Header = ({menulist}) => {
+  const [modalVisible, setModalVisible] = useState(false)
+  
+  const handleToggleModal = () => setModalVisible(modalVisible => !modalVisible)
+
+  return (
   <header>
     <PageSizer>
       <Container>
         <Logo />
-        <Navigation />
+        <BurguerButton onClick={handleToggleModal} superim={modalVisible.toString()} />
+        {
+          modalVisible &&
+          <Menu />
+        }
+        <Navigation list={menulist} />
       </Container>
     </PageSizer>
   </header>
-)
+)}

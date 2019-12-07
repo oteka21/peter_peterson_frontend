@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.section`
   width: 100%;
   height: 200px;
+  position: relative;
   
   @media(min-width: 768px){
     height: 400px;
@@ -95,4 +96,27 @@ export const Message = styled.a`
       font-size: 25px;
     }
   }
+`
+
+export const DotsControl = styled.div`
+  position: absolute;
+  bottom: -30px;
+  right: 20px;
+  height: 20px;
+`
+
+export const Dot = styled.span`
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 4px;
+  background: ${props => props.active ? '#005497' : '#D7D7D7'};
+  cursor: pointer;
+   
+   
+   &:hover {
+     border: 1px solid #676767;
+   }
+
 `
