@@ -74,19 +74,19 @@ export const list_Downloads = [
   {
     source: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
     title: 'Inscripcion',
-    text: 'Mira los documentos que puedes descargar e inscribirte en nuestro instituto',
+    text: 'Mira los documentos que puedes descargar e incribirte a nuestro Instituto.',
     path: '#'
   },
   {
     source: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-    title: 'Inscripcion',
-    text: 'Mira los documentos que puedes descargar e inscribirte en nuestro instituto',
+    title: 'Presentacón TODO EN UNO',
+    text: 'Este recurso te mostrará una presentación de lo más destacado de nuestros servicios , accesa y podrás regresar a esta sección en cualquier momento.',
     path: '#'
   },
   {
     source: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80',
-    title: 'Inscripcion',
-    text: 'Mira los documentos que puedes descargar e inscribirte en nuestro instituto',
+    title: 'Quien fue Peter Peterson?',
+    text: 'Un poco de la historia de este siervo de Dios de quien toma nombre nuestra institución',
     path: '#'
   }
 ]
